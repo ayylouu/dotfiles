@@ -1,0 +1,93 @@
+# reload sxhkd:
+super + alt + k
+	kill $(pidof sxhkd) && sxhkd &
+
+# Programs
+super + Return
+    	$TERMINAL
+
+super + shift + Return
+    	st
+
+super + d
+    	dmenu_run
+
+super + shift + w
+    	librewolf
+
+super + w
+    	brave
+
+ctrl + alt + d
+    	discord
+
+super + alt + m
+	$TERMINAL -e ncmpcpp
+
+super + e
+	$TERMINAL -e lf
+
+super + shift + e
+	pcmanfm
+
+ctrl + alt + p
+     	$TERMINAL -e pulsemixer
+
+super + Escape
+    	$TERMINAL -e htop
+
+super + shift + n
+	terminator -e newsboat
+
+super + shift + t
+	st -e stig
+
+alt + shift + t
+	browser
+
+alt + shift + f
+	ferdi
+
+super + shift + s
+	steam
+
+super + v
+	virtualbox
+
+# amixer
+F3
+    amixer -D pulse sset Master 5%+ && pkill -RTMIN+10 dwmblocks
+F2
+    amixer -D pulse sset Master 5%- && pkill -RTMIN+10 dwmblocks
+
+# mpc
+F1
+    music info
+F6
+    music prev
+F8
+    music next
+F7
+    music toggle
+
+# scripts
+alt + F4
+    bye
+alt + shift + c
+    configs
+alt + shift + s
+    scripts
+alt + shift + e
+    emoji
+alt + shift + w
+    bg-change
+alt + shift + n
+    bookmarks
+alt + shift + h
+    handler
+alt + shift + v
+	mpvwatch
+alt + shift + b
+    $HOME/.scripts/personal/books
+alt + shift + m
+    $HOME/.scripts/personal/minecraft
