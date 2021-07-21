@@ -17,8 +17,10 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
-nnoremap <leader>t :Vex<CR>
 nnoremap <leader>T :Sex<CR>
+nnoremap <leader>t :Vex<CR>
+nnoremap <leader>s :sp<CR>
+nnoremap <leader>v :vs<CR>
 
 " ------------ Plugins ------------
 filetype plugin on
@@ -97,8 +99,7 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-prettier',
   \ 'coc-snippets',
-  \ 'coc-css'
-  \ ]
+  \ 'coc-css']
 
 " ------------ airline ------------
 let g:airline_powerline_fonts = 1
