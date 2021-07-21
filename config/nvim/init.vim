@@ -7,6 +7,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set scrolloff=12
 set nohlsearch
+set noswapfile
 syntax on
 
 " ------------ Maps ------------
@@ -16,12 +17,17 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
-nnoremap <leader>t :vs<CR>:Ntree<CR>
+nnoremap <leader>t :Vex<CR>
+nnoremap <leader>T :Sex<CR>
 
 " ------------ Plugins ------------
 filetype plugin on
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 " Syntax-Highlight
 Plug 'vim-syntastic/syntastic'
 Plug 'sheerun/vim-polyglot'
@@ -36,8 +42,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 " Rust
 Plug 'rust-lang/rust.vim'
-" lsp
-Plug 'neovim/nvim-lspconfig'
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Themes
@@ -48,6 +52,9 @@ Plug 'sainnhe/sonokai'
 
 call plug#end()
 
+" Telescope
+nnoremap <leader>f :Telescope find_files<CR>
+
 " Rust
 let g:rustfmt_autosave = 1
 nnoremap <leader>r :RustRun<CR>
@@ -57,11 +64,6 @@ let g:user_emmet_leader_key='<A-c>'
 
 " ------------ Hexokinase ------------
 let g:Hexokinase_highlighters = [ 'backgroundfull' ]
-
-" ------------ NerdTree ------------
-nnoremap <silent> <C-t> :NERDTreeToggle<CR>
-nnoremap <silent> <leader>n :NERDTreeFocus<CR>
-nnoremap <silent> <C-f> :NERDTreeFind<CR>
 
 " ------------ Fugitive ------------
 nnoremap <silent> <leader>gs :G<CR>
