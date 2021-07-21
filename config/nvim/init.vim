@@ -1,21 +1,25 @@
-" ------------ Basic Config ------------
-filetype plugin on
-syntax on
-let mapleader = " "
-set ignorecase
-set smartcase
-set confirm
+" ------------ Sets ------------
 set number relativenumber 
 set termguicolors
 set title
 set encoding=utf-8
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-map Y y$
-nnoremap <C-L> :nohl<CR><C-L>
+set scrolloff=12
+set nohlsearch
+syntax on
+
+" ------------ Maps ------------
+let mapleader = " "
+nnoremap Y y$
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 
 " ------------ Plugins ------------
-call plug#begin('~/local/share/nvim/plugged')
+filetype plugin on
+call plug#begin('~/.local/share/nvim/plugged')
 
 " Filetree
 Plug 'preservim/nerdtree'
@@ -31,16 +35,44 @@ Plug 'preservim/nerdcommenter'
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+" Rust
+Plug 'rust-lang/rust.vim'
+" lsp
+Plug 'neovim/nvim-lspconfig'
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ghifarit53/tokyonight-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sainnhe/sonokai'
 
 call plug#end()
+
+" Rust
+let g:rustfmt_autosave = 1
+nnoremap <leader>r :RustRun<CR>
+
+" ------------ emmet ------------
+let g:user_emmet_leader_key='<A-c>'
+
+" ------------ Hexokinase ------------
+let g:Hexokinase_highlighters = [ 'backgroundfull' ]
+
+" ------------ NerdTree ------------
+nnoremap <silent> <C-t> :NERDTreeToggle<CR>
+nnoremap <silent> <leader>n :NERDTreeFocus<CR>
+nnoremap <silent> <C-f> :NERDTreeFind<CR>
+
+" ------------ Fugitive ------------
+nnoremap <leader>g :G<CR>
+
+" ------------ GitGutter ------------
+nnoremap <silent> <leader>G :GitGutterBufferToggle<CR>
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+let g:gitgutter_set_sign_backgrounds = 0
 
 " ------------ coc.vim ------------
 inoremap <silent><expr> <TAB>
@@ -56,29 +88,14 @@ endfunction
 
 let g:coc_global_extensions = [ 
   \ 'coc-pairs',
+  \ 'coc-pyright',
+  \ 'coc-rust-analyzer',
   \ 'coc-json',
   \ 'coc-html',
   \ 'coc-prettier',
-  \ 'coc-snippets'
+  \ 'coc-snippets',
+  \ 'coc-css'
   \ ]
-
-" ------------ NerdTree ------------
-nnoremap <silent> <C-t> :NERDTreeToggle<CR>
-nnoremap <silent> <leader>n :NERDTreeFocus<CR>
-nnoremap <silent> <C-f> :NERDTreeFind<CR>
-
-" ------------ emmet ------------
-let g:user_emmet_leader_key='<A-c>'
-
-" ------------ Hexokinase ------------
-let g:Hexokinase_highlighters = [ 'backgroundfull' ]
-
-" ------------ GitGutter ------------
-nnoremap <silent> <leader>g :GitGutterBufferToggle<CR>
-highlight GitGutterAdd    guifg=#009900 ctermfg=2
-highlight GitGutterChange guifg=#bbbb00 ctermfg=3
-highlight GitGutterDelete guifg=#ff2222 ctermfg=1
-let g:gitgutter_set_sign_backgrounds = 0
 
 " ------------ airline ------------
 let g:airline_powerline_fonts = 1

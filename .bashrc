@@ -36,7 +36,7 @@ PS1='\e[1;34m\u \e[01;32m\W\e[1;31m\$\e[m '
 set -o vi
 
 alias p='sudo pacman'
-alias v='nvim -u ~/.vimrc'
+alias v='nvim'
 
 #youtube-dl
 alias yta='youtube-dl -ix --audio-format "flac"'

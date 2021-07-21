@@ -31,7 +31,10 @@ super + shift + e
 	pcmanfm
 
 ctrl + alt + p
-     	$TERMINAL -e pulsemixer
+    $TERMINAL -e pulsemixer
+
+ctrl + shift + s
+    scrot
 
 super + Escape
     	$TERMINAL -e htop
