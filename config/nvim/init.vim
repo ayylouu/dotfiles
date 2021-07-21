@@ -65,7 +65,9 @@ nnoremap <silent> <leader>n :NERDTreeFocus<CR>
 nnoremap <silent> <C-f> :NERDTreeFind<CR>
 
 " ------------ Fugitive ------------
-nnoremap <leader>g :G<CR>
+nnoremap <silent> <leader>gs :G<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gp :Gpush<CR>
 
 " ------------ GitGutter ------------
 nnoremap <silent> <leader>G :GitGutterBufferToggle<CR>
