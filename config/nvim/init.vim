@@ -16,13 +16,12 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+nnoremap <leader>t :vs<CR>:Ntree<CR>
 
 " ------------ Plugins ------------
 filetype plugin on
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Filetree
-Plug 'preservim/nerdtree'
 " Syntax-Highlight
 Plug 'vim-syntastic/syntastic'
 Plug 'sheerun/vim-polyglot'
