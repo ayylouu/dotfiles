@@ -58,7 +58,8 @@ Plug 'sainnhe/sonokai'
 call plug#end()
 
 " Telescope
-nnoremap <leader>f :Telescope find_files<CR>
+nnoremap <leader>ff :Telescope find_files<CR>
+nnoremap <leader>fb :Telescope buffers<CR>
 
 " Rust
 let g:rustfmt_autosave = 1
