@@ -8,6 +8,9 @@ set shiftwidth=4
 set scrolloff=12
 set nohlsearch
 set noswapfile
+set nobackup
+set splitright
+set updatetime=50
 syntax on
 
 " ------------ Maps ------------
