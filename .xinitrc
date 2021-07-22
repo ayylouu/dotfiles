@@ -3,6 +3,5 @@ xmodmap ~/.config/.Xmodmap &
 mpd & 
 dunst &
 sxhkd &
-~/.fehbg &
-dwmblocks &
-exec dwm
+nm-applet &
+exec awesome
