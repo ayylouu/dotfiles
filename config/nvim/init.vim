@@ -75,6 +75,7 @@ let g:Hexokinase_highlighters = [ 'backgroundfull' ]
 nnoremap <silent> <leader>gs :G<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gp :Gpush<CR>
+nnoremap <silent> <leader>gd :Gdiffsplit<CR>
 
 " ------------ GitGutter ------------
 nnoremap <silent> <leader>G :GitGutterBufferToggle<CR>
