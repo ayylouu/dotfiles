@@ -100,7 +100,9 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-prettier',
   \ 'coc-snippets',
+  \ 'coc-sh',
   \ 'coc-css']
+
 
 " ------------ airline ------------
 let g:airline_powerline_fonts = 1
