@@ -4,4 +4,6 @@ mpd &
 dunst &
 sxhkd &
 nm-applet &
-exec awesome
+~/.fehbg &
+dwmblocks &
+exec dwm
