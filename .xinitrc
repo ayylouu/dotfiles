@@ -5,5 +5,6 @@ dunst &
 sxhkd &
 nm-applet &
 ~/.fehbg &
+flameshot &
 dwmblocks &
 exec dwm
