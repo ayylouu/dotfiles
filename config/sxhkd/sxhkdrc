@@ -34,7 +34,7 @@ ctrl + alt + p
     $TERMINAL -e pulsemixer
 
 ctrl + shift + s
-    scrot
+    flameshot gui
 
 super + Escape
    $TERMINAL -e htop
