@@ -43,7 +43,6 @@ Plug 'mattn/emmet-vim'
 " Commenting
 Plug 'preservim/nerdcommenter'
 " Git
-Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 " Rust
 Plug 'rust-lang/rust.vim'
@@ -76,9 +75,6 @@ nnoremap <silent> <leader>gs :G<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gp :Gpush<CR>
 nnoremap <silent> <leader>gd :Gdiffsplit<CR>
-
-" ------------ GitGutter ------------
-nnoremap <silent> <leader>G :GitGutterBufferToggle<CR>
 
 " ------------ coc.vim ------------
 inoremap <silent><expr> <TAB>
