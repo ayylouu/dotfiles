@@ -115,6 +115,16 @@ else
 fi
 }}
 
+cmd fzf_jump ${{
+    res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    if [ -d "$res" ]; then
+        cmd="cd"
+    else 
+        cmd="select"                                                       
+    fi
+    lf -remote "send $id $cmd \"$res\""
+}}
+
 # Bindings
 # Remove some defaults
 map m
@@ -147,6 +157,7 @@ map u half-up
 map d half-down
 map <c-u> unarchive "$f"
 map i image_preview
+map f fzf_jump
 
 # Mouvement
 map gh cd ~ 
