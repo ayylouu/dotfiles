@@ -137,7 +137,9 @@ map gd cd ~/Documents
 map gD cd ~/Downloads
 map gp, cd ~/Pictures
 map gpw cd ~/Pictures/wallpapers
+map gpa cd ~/Pictures/art
 map gv, cd ~/Videos
 map gvm cd ~/Videos/movies
 map gva cd ~/Videos/anime
 map gr, cd ~/repositories
+map grd cd ~/repositories/dotfiles
