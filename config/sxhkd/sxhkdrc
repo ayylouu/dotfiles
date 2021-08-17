@@ -36,6 +36,9 @@ ctrl + alt + p
 ctrl + shift + s
     flameshot gui
 
+alt + space
+    dunstctl close-all
+
 super + Escape
    $TERMINAL -e htop
 
