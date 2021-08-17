@@ -15,19 +15,11 @@ export PATH=$PATH:$HOME/.scripts/bar
 export TERMINAL=alacritty
 
 #ls
-alias ls='lsd -al --color=auto'
-# Colorize grep output (good for log files)
+alias ls='lsd -a --color=auto'
 alias grep='grep --color=auto'
-
-# confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
-
-#python
-alias py="python"
-
 alias tsm='transmission-remote'
+alias py="python"
+alias f="cd \$(fd -t d . $HOME | fzf)"
 
 force_color_prompt=yes
 
@@ -41,9 +33,9 @@ alias v='nvim'
 #youtube-dl
 alias yta='youtube-dl -ix --audio-format "flac"'
 
-#neofetch
-alias neofetch='neofetch --disable theme icons cpu gpu'
+#pfetch
+export PF_INFO="ascii title os host kernel uptime pkgs shell editor wm memory palette"
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
-neofetch
+pfetch
