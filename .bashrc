@@ -1,10 +1,4 @@
-#
-# ~/.bashrc
-#
-
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+[[ $- != *i* ]] && return # If not running interactively, don't do anything
 
 PS1='\e[1;34m\u \e[01;32m\W\e[1;31m\$\e[m '
 
@@ -16,10 +10,10 @@ export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/.scripts/bar
 export TERMINAL=alacritty
 export PF_INFO="ascii title os host kernel uptime pkgs shell editor wm memory palette"
+export LESSHISTFILE=-
 
 set -o vi
-
-alias ls='lsd -a --color=auto'
+alias ls='lsd -Al'
 alias grep='grep --color=auto'
 alias tsm='transmission-remote'
 alias py="python"
@@ -27,9 +21,20 @@ alias f="cd \$(fd -t d . $HOME | fzf)"
 alias yta='youtube-dl -ix --audio-format "flac"'
 alias p='sudo pacman'
 alias v='nvim'
+alias c="cd_lf"
 
-force_color_prompt=yes
-
-
+cd_lf () {
+    tmp="$(mktemp)"
+    /usr/bin/lf --last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}
 
 pfetch
