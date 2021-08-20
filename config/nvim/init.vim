@@ -24,6 +24,7 @@ nnoremap <leader>T :Sex<CR>
 nnoremap <leader>t :Vex<CR>
 nnoremap <leader>s :sp<CR>
 nnoremap <leader>v :vs<CR>
+nnoremap <c-t> :terminal<CR>
 
 " ------------ Plugins ------------
 filetype plugin on
