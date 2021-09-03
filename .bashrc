@@ -18,7 +18,7 @@ alias grep='grep --color=auto'
 alias tsm='transmission-remote'
 alias py="python"
 alias f="cd \$(fd -t d . $HOME | fzf)"
-alias yta='youtube-dl -ix --audio-format "flac"'
+alias yta='youtube-dl -ix --audio-format "flac" --restrict-filenames -o "%(title)s.%(ext)s"'
 alias p='sudo pacman'
 alias v='nvim'
 alias c="cd_lf"
