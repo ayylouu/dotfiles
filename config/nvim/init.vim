@@ -25,6 +25,8 @@ nnoremap <leader>t :Vex<CR>
 nnoremap <leader>s :sp<CR>
 nnoremap <leader>v :vs<CR>
 nnoremap <c-t> :terminal<CR>
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " ------------ Plugins ------------
 filetype plugin on
@@ -49,6 +51,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'rust-lang/rust.vim'
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Marcdown preview
+Plug 'skanehira/preview-markdown.vim'
 " Themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -67,6 +71,9 @@ nnoremap <leader>r :RustRun<CR>
 
 " ------------ emmet ------------
 let g:user_emmet_leader_key='<A-c>'
+
+" ------------ preview-markdown ------------
+nnoremap <leader>m :PreviewMarkdown<CR>
 
 " ------------ Hexokinase ------------
 let g:Hexokinase_highlighters = [ 'backgroundfull' ]
