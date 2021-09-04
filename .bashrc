@@ -6,8 +6,7 @@ export HISTCONTROL=ignoreboth:erasedups
 export TERM="xterm-256color"
 export EDITOR=nvim
 export BRWSER=brave
-export PATH=$PATH:$HOME/.scripts
-export PATH=$PATH:$HOME/.scripts/bar
+export PATH=$PATH:$HOME/.scripts:$HOME/.scripts/bar:$HOME/.local/bin
 export TERMINAL=alacritty
 export PF_INFO="ascii title os host kernel uptime pkgs shell editor wm memory palette"
 export LESSHISTFILE=-
@@ -38,3 +37,4 @@ cd_lf () {
 }
 
 pfetch
+eval "$(starship init bash)"
