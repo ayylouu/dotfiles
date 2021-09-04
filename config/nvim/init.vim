@@ -51,6 +51,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'rust-lang/rust.vim'
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Vimwiki
+Plug 'vimwiki/vimwiki'
 " Marcdown preview
 Plug 'skanehira/preview-markdown.vim'
 " Themes
@@ -60,6 +62,9 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sainnhe/sonokai'
 
 call plug#end()
+
+" Vimwiki
+let g:vimwiki_list = [{'path': '$HOME/Documents/VimWiki', 'syntax': 'markdown', 'ext': '.md'}]
 
 " Telescope
 nnoremap <leader>ff :Telescope find_files<CR>
@@ -105,6 +110,7 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-snippets',
   \ 'coc-sh',
+  \ 'coc-lua',
   \ 'coc-css']
 
 
