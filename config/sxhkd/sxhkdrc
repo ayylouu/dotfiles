@@ -22,7 +22,10 @@ ctrl + alt + d
    discord
 
 super + alt + m
-	$TERMINAL -e ncmpcpp
+	$TERMINAL  --class music,music -e ncmpcpp
+
+super + shift + v
+    $TERMINAL --class VimWiki,VimWiki -e $EDITOR $HOME/Documents/VimWiki/index.md
 
 super + e
 	$TERMINAL -e lf
@@ -33,7 +36,7 @@ super + shift + e
 ctrl + alt + p
     $TERMINAL -e pulsemixer
 
-ctrl + shift + s
+alt + s
     flameshot gui
 
 alt + space
@@ -76,9 +79,9 @@ F8
 F7
     music toggle
 
-alt + s
-    scrot -s -e 'mv $f ~/Pictures/screenshots'
 # scripts
+F9
+    keyboard_layout
 alt + F4
     bye
 alt + shift + c
