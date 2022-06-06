@@ -1,0 +1,6 @@
+require "config.options"
+require "config.keymaps"
+require "config.plugins"
+require "config.themes"
+require "config.cmp"
+require "config.lsp"
