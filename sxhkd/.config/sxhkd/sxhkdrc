@@ -1,0 +1,106 @@
+# reload sxhkd:
+super + alt + k
+	kill $(pidof sxhkd) && sxhkd &
+
+# Programs
+super + Return
+   $TERMINAL
+
+super + shift + Return
+   st
+
+super + d
+   dmenu_run
+
+super + shift + w
+   librewolf
+
+super + w
+   firefox
+
+ctrl + alt + d
+   discord
+
+super + alt + m
+	$TERMINAL  --class music,music -e ncmpcpp
+
+super + shift + v
+    $TERMINAL --class VimWiki,VimWiki -e $EDITOR $HOME/Documents/VimWiki/index.md
+
+super + e
+	$TERMINAL -e lf
+
+super + shift + e
+	pcmanfm
+
+ctrl + alt + p
+    $TERMINAL -e pulsemixer
+
+alt + s
+    flameshot gui
+
+alt + space
+    dunstctl close-all
+
+super + Escape
+   $TERMINAL -e htop
+
+super + shift + n
+	terminator -e newsboat
+
+super + shift + t
+	st -e stig
+
+alt + shift + t
+	browser
+
+alt + shift + f
+	ferdi
+
+super + shift + s
+	steam
+
+super + v
+	virtualbox
+
+# amixer
+F3
+    amixer -D pulse sset Master 5%+ && pkill -RTMIN+10 dwmblocks
+F2
+    amixer -D pulse sset Master 5%- && pkill -RTMIN+10 dwmblocks
+F4
+    pulsemixer --id source-1 --toggle-mute && notify-send "mic toggle"
+
+# mpc
+F1
+    music info
+F6
+    music prev
+F8
+    music next
+F7
+    music toggle
+
+# scripts
+F9
+    keyboard_layout
+alt + F4
+    bye
+alt + shift + c
+    configs
+alt + shift + s
+    scripts
+alt + shift + e
+    emoji
+alt + shift + w
+    bg-change
+alt + shift + n
+    bookmarks
+alt + shift + h
+    handler
+alt + shift + v
+	mpvwatch
+alt + shift + b
+    $HOME/.scripts/personal/books
+alt + shift + m
+    $HOME/.scripts/personal/minecraft
