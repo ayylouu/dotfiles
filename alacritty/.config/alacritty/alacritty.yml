@@ -1,0 +1,58 @@
+env:
+  LC_ALL: "en_US.UTF-8"
+
+# Font configuration
+font:
+  normal:
+    family: Hack
+    style: Regular
+  size: 10
+
+  bold:
+    family: Hack
+    style: Bold
+
+  italic:
+    family: Hack
+    style: Italic
+
+draw_bold_text_with_bright_colors: true
+
+#colors 
+schemes:
+  dracula: &dracula
+    primary:
+      background: "#282a36"
+      foreground: "#f8f8f2"
+    normal:
+      black:   "#000000"
+      red:     "#ff5555"
+      green:   "#50fa7b"
+      yellow:  "#f1fa8c"
+      blue:    "#bd93f9"
+      magenta: "#ff79c6"
+      cyan:    "#8be9fd"
+      white:   "#bbbbbb"
+    bright:
+      black:   "#44475a"
+      red:     "#ff5555"
+      green:   "#50fa7b"
+      yellow:  "#f1fa8c"
+      blue:    "#bd93f9"
+      magenta: "#ff79c6"
+      cyan:    "#8be9fd"
+      white:   "#ffffff"
+
+colors: *dracula
+
+key_bindings:
+  - { key: V,         mods: Control|Shift, action: Paste                       }
+  - { key: C,         mods: Control|Shift, action: Copy                        }
+  - { key: Insert,    mods: Shift,         action: PasteSelection              }
+  - { key: Equals,    mods: Control,       action: IncreaseFontSize            }
+  - { key: Minus,     mods: Control,       action: DecreaseFontSize            }
+  - { key: L,         mods: Control,       action: ClearLogNotice              }
+  - { key: PageUp,    mods: None,          action: ScrollPageUp,   mode: ~Alt  }
+  - { key: PageDown,  mods: None,          action: ScrollPageDown, mode: ~Alt  }
+  - { key: Home,      mods: Shift,         action: ScrollToTop,    mode: ~Alt  }
+  - { key: End,       mods: Shift,         action: ScrollToBottom, mode: ~Alt  }
