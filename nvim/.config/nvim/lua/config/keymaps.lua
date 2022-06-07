@@ -1,6 +1,4 @@
 local opts = { noremap = true, silent = true }
-
-
 --local term_opts = { silent = true }
 
 -- Shorten function name
@@ -28,6 +26,14 @@ keymap("n", "<A-l>", "<C-w>l", opts)
 
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 keymap("n", "Y", "y$", opts)
+
+keymap("n", "<leader>bp", ":bprevious<CR>", opts)
+keymap("n", "<leader>bn", ":bnext<CR>", opts)
+
+-- Telescope
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)

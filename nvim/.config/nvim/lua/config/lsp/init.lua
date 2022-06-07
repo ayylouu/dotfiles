@@ -10,4 +10,6 @@ lsp_installer.on_server_ready(function(server)
   server:setup(opts)
 end)
 
+require('rust-tools').setup({})
+
 require "config.lsp.keymaps"

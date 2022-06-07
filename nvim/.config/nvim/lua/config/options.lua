@@ -17,3 +17,11 @@ local options = {
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
+
+-- auto format rust files when writing
+vim.cmd [[
+  augroup rust_format
+    autocmd!
+    autocmd BufWritePre *.rs RustFmt
+  augroup end
+]]
